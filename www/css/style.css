@@ -3,8 +3,67 @@
 	font-family: "MicrosoftYaHei";
 }
 .main{
-        background: url(../img/bg.png) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
+	background: url(../img/bg.png) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;
+}
+.bar .title {
+	font-size: 20px;
+}
+.padding {
+	padding: 10px 5px;
+}
+#mainNews,#mainSearch,#mainBottom{
+	background-color:rgba(68, 68, 68,0.65);
+}
+#mainNews > span{
+	text-align: center;margin:auto;
+}
+#mainNews > span#mainI{
+	margin:auto 0px;margin-right: 5px;
+}
+.row{
+	height: 43px;
+}
+#mainSearch,#mainBottom{
+	border-radius: 5px;
+}
+#mianButton{
+	width: 100%;height: 38px;
+}
+#mainMiddle > div.col > button{
+	background-color:rgba(68, 68, 68,0.5);	
+}
+.button-oversized{
+	font-size: 40px;
+}
+#mainBottom > ul > li{	
+	background-color:rgba(68, 68, 68,0);
+}
+.center{
+	text-align: center;
+}
+
+
+#myMain{
+	background: url(../img/myMainBg.jpeg) no-repeat ; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;position: relative;
+}
+#myPerson{
+	margin:5px auto;width: 60px;height: 60px;background: url(../img/person.png) no-repeat ; -webkit-background-size: 100%;-moz-background-size: 100%;background-size: 100%;
+}
+#myPersonName  {
+	font-size: 15px;
+}
+#myRank{
+	width: 13px;height: 13px;background: url(../img/rank.png) no-repeat ; -webkit-background-size: 100%;-moz-background-size: 100%;background-size: 100%;display: inline-block;
+}
+#myStar{
+	margin:10px auto;height: 20px;width:100px;background: url(../img/mystar5.png) no-repeat ; -webkit-background-size: 100%;-moz-background-size: 100%;background-size: 100%;
+}
+#myNum {
+	position: absolute;bottom: 0;
+}
+#myNum > div{
+	background-color:black;width: 49%
+}
+#myList{
+	margin-top: 5px;
 }

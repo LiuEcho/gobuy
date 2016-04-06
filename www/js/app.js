@@ -88,4 +88,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     $ionicConfigProvider.tabs.position('bottom');// other values: top
     $ionicConfigProvider.backButton.icon('ion-chevron-left');
+    $ionicConfigProvider.platform.android.navBar.alignTitle('center');
+    $ionicConfigProvider.platform.android.tabs.style('standard');
 }])

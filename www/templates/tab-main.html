@@ -1,9 +1,56 @@
 <ion-view view-title="餐饮企业" class="main">
-  <ion-content class="padding">
-    <div>
-    <span>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </span>
-    </div>
-  </ion-content>
+<ion-content class="padding">
+<div class="row light" id="mainNews">
+	<span >
+		温馨提示：今日未采购！！
+	</span>
+	<span id="mainI">
+		<i class="icon ion-chevron-right"></i>
+	</span>
+</div>
+<div class="row" style="margin-top:10px;padding-right: 0px;padding-left: 0px;" id="mainSearchDiv">
+	<div class="item-input-inset col col-75 " id="mainSearch">
+		<label class="item-input-wrapper" style="background-color:rgba(68, 68, 68,0);">
+			<input type="text" placeholder="输入采购订单邀请码">
+		</label>
+	</div>
+	<div class="col col-offset-1" style="padding-top: 0px;padding-bottom: 0px;">
+		<button class="button button-dark button-small" id="mianButton">确定</button>
+	</div>
+</div>
+<div class="row" id="mainMiddle" style="margin-top:30px;height: 120px;">
+	<div class="col" style="padding: 1px;">
+		<button class="button icon-center button-dark button-oversized padding-top ion-clipboard" style="width: 100%"><p style="font-size: 12px;">今日采购详情</p></button>
+	</div>
+	<div class="col" style="padding: 1px;">
+		<button class="button icon-center button-dark button-oversized padding-top ion-android-time" style="width: 100%"><p style="font-size: 12px;">我的采购计划</p></button>
+	</div>
+	<div class="col" style="padding: 1px;">
+		<button class="button icon-center button-dark button-oversized padding-top ion-ios-pulse-strong" style="width: 100%"><p style="font-size: 12px;">农贸市场采购</p></button>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+<div class="padding" id="mainBottom" style="margin-top:30px;">
+	<div style="margin-bottom: 10px;" class="center">
+		<span class="light">今日采购报价提示</span>
+	</div>
+	<ul class="list list-borderless">
+		<li class="item">
+			<span class="assertive">[热门采购]</span>
+			<span class="assertive">土豆</span>
+			<span class="assertive">￥1.60/kg</span>
+		</li>
+		<li class="item">
+			<span class="assertive">[热门紧缺]</span>
+			<span class="assertive">西红柿</span>
+			<span class="assertive">￥1.60/kg</span>
+		</li>
+		<li class="item">
+			<span class="assertive">[采购报价]</span>
+			<span class="assertive">南瓜</span>
+			<span class="assertive">￥1.60/kg</span>
+		</li>
+	</ul>
+</div>
+</ion-content>
 </ion-view>
