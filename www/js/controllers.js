@@ -1,3 +1,4 @@
+'use strict';
 angular.module('starter.controllers', [])
 
 .controller('MainCtrl', function($scope) {})
@@ -24,5 +25,8 @@ angular.module('starter.controllers', [])
 .controller('MyCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
-  };
+  }
+})  
+.controller('MyPurchaseCtrl', function($scope) {
+
 });

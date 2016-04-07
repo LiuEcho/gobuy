@@ -1,3 +1,4 @@
+'use strict';
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -50,6 +51,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.my-purchase', {
+      url: '/my/purchase',
+      views: {
+        'tab-my': {
+          templateUrl: 'templates/my-purchase.html',
+          controller: 'MyPurchaseCtrl'
+        }
+      }
+    })
   .state('tab.my', {
       url: '/my',
       views: {
@@ -88,6 +98,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     $ionicConfigProvider.tabs.position('bottom');// other values: top
     $ionicConfigProvider.backButton.icon('ion-chevron-left');
+  
     $ionicConfigProvider.platform.android.navBar.alignTitle('center');
     $ionicConfigProvider.platform.android.tabs.style('standard');
+    $ionicConfigProvider.backButton.text("");
 }])
