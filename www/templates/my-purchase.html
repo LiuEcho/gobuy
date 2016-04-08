@@ -1,12 +1,17 @@
 <ion-view view-title="我的采购商">
 <ion-content class="padding">
- <ion-list>
-            <ion-item class="item-thumbnail-left item-icon-right">
-                <img src="img/purchase.png">
-                <h2>下沙菜贩子</h2>
-                <p>下沙农贸市场</p>
-               <i class="icon ion-ios-telephone balanced"></i>
-            </ion-item>
-        </ion-list>
+<ion-list class="card">
+<ion-item class="item-thumbnail-left item-icon-right" ng-repeat="purchase in Purchases">
+<img ng-src="{{purchase.avatar}}">
+<h3 class="item-icon-right">{{purchase.name}}<i class="ion-ios-location" style="margin: 0 1px 0 15px"></i><span>{{purchase.distance}}</span>km</h3>
+<div id="myStar" style="margin: 0 0 5px 0;background:url({{purchase.star}}) no-repeat;background-size: 100%"></div>
+<p span style="font-size: 10px;">{{purchase.address}}<span style="margin: 3px;font-size: 8px;">月成交<span>{{purchase.deal}}</span>单</span></p>
+<i class="icon ion-ios-telephone balanced" style="padding-bottom: 90px"></i>
+<div style="text-align: right;margin:10px 0 0 0;">
+	<a class="button button-balanced button-small" style="padding:1px 6px;border:1px solid #33CC1F">给他下单</a>
+	<a class="button button-assertive button-small" style="padding:1px 6px;border:1px solid #FF0000" href="#/tab/my/purchase/{{purchase.id}}">进入店铺</a>
+</div>
+</ion-item>
+</ion-list>
 </ion-content>
 </ion-view>

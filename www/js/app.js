@@ -31,16 +31,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-
-  // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
-  // Each tab has its own nav history stack:
-
   .state('tab.main', {
     url: '/main',
     views: {
@@ -50,34 +45,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+  .state('tab.purchase-detail', {
+    url: '/my/purchase/:purchaseId',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/purchase-detail.html',
+        controller: 'PurchaseDetailCtrl'
+      }
+    }
+  })
   .state('tab.my-purchase', {
-      url: '/my/purchase',
-      views: {
-        'tab-my': {
-          templateUrl: 'templates/my-purchase.html',
-          controller: 'MyPurchaseCtrl'
-        }
+    url: '/my/purchase',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my-purchase.html',
+        controller: 'MyPurchaseCtrl'
       }
-    })
+    }
+  })
   .state('tab.my', {
-      url: '/my',
-      views: {
-        'tab-my': {
-          templateUrl: 'templates/tab-my.html',
-          controller: 'MyCtrl'
-        }
+    url: '/my',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/tab-my.html',
+        controller: 'MyCtrl'
       }
-    })
-    .state('tab.order-detail', {
-      url: '/order/:orderId',
-      views: {
-        'tab-order': {
-          templateUrl: 'templates/order-detail.html',
-          controller: 'OrderDetailCtrl'
-        }
+    }
+  })
+  .state('tab.order-detail', {
+    url: '/order/:orderId',
+    views: {
+      'tab-order': {
+        templateUrl: 'templates/order-detail.html',
+        controller: 'OrderDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.order', {
     url: '/order',
@@ -98,8 +101,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     $ionicConfigProvider.tabs.position('bottom');// other values: top
     $ionicConfigProvider.backButton.icon('ion-chevron-left');
-  
+    $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-chevron-left');
+    $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-chevron-left'); 
     $ionicConfigProvider.platform.android.navBar.alignTitle('center');
     $ionicConfigProvider.platform.android.tabs.style('standard');
     $ionicConfigProvider.backButton.text("");
-}])
+  }])

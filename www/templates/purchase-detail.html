@@ -1,0 +1,17 @@
+<ion-view view-title="{{purchase.name}}" >
+<ion-content class="padding">
+<div class="item-thumbnail-left item-icon-right" style="border: 1px solid #ddd">
+	<img ng-src="{{purchase.avatar}}" style="width: 60px;height: 60px;margin-left:10px;">
+	<p style="display: inline-block;">等级：
+		<div id="myStar" style="margin: 5px 0 0 0;background:url({{purchase.star}}) no-repeat 0px 3px;background-size: 100%;display: inline-block;"></div>
+	</p>
+	<p span style="font-size: 16px;">{{purchase.address}}</p>
+	<i class="icon ion-ios-telephone balanced" style="padding-bottom: 100px;right: 21px;"></i>
+</div>
+<div class="button-bar">
+	<a id="goods" class="button button-light  button-block" style="border: 1px solid #ddd">商品</a>
+	<a id="introduction" class="button button-light  button-block" style="border: 1px solid #ddd">商户介绍</a>
+</div>
+<div id="goodsDiv" class="padding" style="position: absolute;">goods</div>
+<div id="introductionDiv" class="padding" style="position: absolute;">introduction</div>
+</ion-view>

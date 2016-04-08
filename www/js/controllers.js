@@ -27,6 +27,11 @@ angular.module('starter.controllers', [])
     enableFriends: true
   }
 })  
-.controller('MyPurchaseCtrl', function($scope) {
 
+.controller('MyPurchaseCtrl', function($scope,Purchases) {
+    $scope.Purchases = Purchases.all();
+})
+
+.controller('PurchaseDetailCtrl', function($scope, $stateParams, Purchases) {
+  $scope.purchase = Purchases.get($stateParams.purchaseId);
 });
