@@ -27,11 +27,28 @@ angular.module('starter.controllers', [])
     enableFriends: true
   }
 })  
-
-.controller('MyPurchaseCtrl', function($scope,Purchases) {
-    $scope.Purchases = Purchases.all();
+.controller('MainPlanCtrl', function($scope,Purchases) {
+  $scope.Purchases = Purchases.all();
+})
+.controller('MainmMarketCtrl', function($scope,Purchases) {
+  $scope.Purchases = Purchases.all();
+})
+.controller('MainPurchaseCtrl', function($scope,mainPurchases) {
+  $scope.mainPurchases = mainPurchases.all();
+  $scope.ShowModel = 0;
+  $scope.ChangeShow = function(val){
+    $scope.ShowModel = val;
+  }
 })
 
+.controller('MyPurchaseCtrl', function($scope,Purchases) {
+  $scope.Purchases = Purchases.all();
+})
 .controller('PurchaseDetailCtrl', function($scope, $stateParams, Purchases) {
+  $scope.ShowModel = 1;
   $scope.purchase = Purchases.get($stateParams.purchaseId);
+  $scope.goods =$scope.purchase.goods;
+  $scope.ChangeShow = function(val){
+    $scope.ShowModel = val;
+  }
 });

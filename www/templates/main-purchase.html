@@ -1,0 +1,31 @@
+<ion-view view-title="今日采购" >
+<ion-content class="padding">
+<div class="button-bar" id="mainPurchaseDiv">
+	<button class="button" ng-click="ChangeShow(0)" style="padding:10px 0"><p style="width: 100%;margin: 0px;border-right: 1px solid grey;font-size: 20px;">大白菜</p></button>
+	<button class="button" ng-click="ChangeShow(1)" style="padding:10px 0"><p style="width: 100%;margin: 0px;border-right: 1px solid grey;font-size: 20px;">土豆</p></button>
+	<button class="button" ng-click="ChangeShow(2)" style="padding:10px 0"><p style="width: 100%;margin: 0px;font-size: 20px;">西红柿</p></button>
+</div>
+<div ng-show="ShowModel=='0'" class="item-thumbnail-left" style="position:relative;" id="purchaseDiv">
+	<img ng-src="{{mainPurchases[0].picture}}" style="width: 100px;height: 100px;">
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日平均价：￥{{mainPurchases[0].todayPrice}}</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日销售量：{{mainPurchases[0].todaySales}}kg</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">市场参考价：￥{{mainPurchases[0].referencePrice}}</p>
+	<p style="text-align: right;color: #ef473a;font-size: 19px;" class="padding">总金额：￥{{mainPurchases[0].total}}</p>
+</div>
+<div ng-show="ShowModel=='1'" class="item-thumbnail-left" style="position:relative;" id="purchaseDiv">
+	<img ng-src="{{mainPurchases[1].picture}}" style="width: 100px;height: 100px;">
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日平均价：￥{{mainPurchases[1].todayPrice}}</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日销售量：{{mainPurchases[1].todaySales}}kg</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">市场参考价：￥{{mainPurchases[1].referencePrice}}</p>
+	<p style="text-align: right;color: #ef473a;font-size: 19px;" class="padding">总金额：￥{{mainPurchases[1].total}}</p>
+</div>
+<div ng-show="ShowModel=='2'" class="item-thumbnail-left" style="position:relative;" id="purchaseDiv">
+	<img ng-src="{{mainPurchases[2].picture}}" style="width: 100px;height: 100px;">
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日平均价：￥{{mainPurchases[2].todayPrice}}</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">今日销售量：{{mainPurchases[2].todaySales}}kg</p>
+	<p style="color: grey;font-size: 16px;" class="padding-top">市场参考价：￥{{mainPurchases[2].referencePrice}}</p>
+	<p style="text-align: right;color: #ef473a;font-size: 19px;" class="padding">总金额：￥{{mainPurchases[2].total}}</p>
+</div>
+</ion-content>
+
+</ion-view>

@@ -1,34 +1,22 @@
 'use strict';
 angular.module('starter.services', [])
-
 .factory('Orders', function() {
   var Orders = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+    name: '白菜',
+    peice: '12.5',
+    face: 'img/pic.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    name: '土豆',
+   peice: '12.5',
+    face: 'img/pic.png'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    name: '西红柿',
+   peice: '12.5',
+    face: 'img/pic.png'
   }];
-
   return {
     all: function() {
       return Orders;
@@ -55,21 +43,45 @@ angular.module('starter.services', [])
     distance:'1',
     deal:"100",
     star:'img/mystar5.png',
-    avatar: 'img/purchase.png'
-  },{id: 1,
+    avatar: 'img/purchase.png',
+    authentication:'img/authentication.png',
+    monthDeal:"1000",
+    goods:[{
+      id:0,
+      name:"大白菜",
+      price:5.60,
+      picture:'img/pic.png',
+      sales:100
+    },{
+      id:0,
+      name:"高级大白菜",
+      price:7.60,
+      picture:'img/pic.png',
+      sales:110
+    }]
+  },{
+    id: 1,
     name: '下沙菜贩子1',
     address: '下沙农贸市场1',
     distance:'3',
     deal:"101",
     star:'img/mystar3.png',
-    avatar: 'img/purchase.png'
-  },{id: 2,
-    name: '滨江菜贩子',
-    address: '滨江农贸市场1',
-    distance:'4',
-    deal:"121",
-    star:'img/mystar4.png',
-    avatar: 'img/purchase.png'
+    avatar: 'img/purchase.png',
+    authentication:'img/authentication.png',
+    monthDeal:"1200",
+    goods:[{
+      id:0,
+      name:"大白菜",
+      price:5.60,
+      picture:'img/pic.png',
+      sales:100
+    },{
+      id:0,
+      name:"高级大白菜",
+      price:7.60,
+      picture:'img/pic.png',
+      sales:110
+    }]
   }];
   return {
     all: function() {
@@ -84,4 +96,34 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+.factory('mainPurchases', function() {
+  var mainPurchases = [{
+    id: 0,
+    todayPrice: '12.22',
+    todaySales: '1231',
+    referencePrice: '12.11',
+     picture:'img/pic.png',
+    total:1211
+  }, {
+    id: 1,
+    todayPrice: '17.42',
+    todaySales: '2231',
+    referencePrice: '13.13',
+     picture:'img/pic.png',
+    total:1211
+  }, {
+    id: 2,
+    todayPrice: '7.2',
+    todaySales: '1888',
+    referencePrice: '14.12',
+     picture:'img/pic.png',
+    total:1211
+  }];
+  return {
+    all: function() {
+      return mainPurchases;
+    }
+  };
+})

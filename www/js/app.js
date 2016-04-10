@@ -36,6 +36,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
+  .state('tab.main-market', {
+    url: '/main/market',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/main-market.html',
+        controller: 'MainmMarketCtrl'
+      }
+    }
+  })
+   .state('tab.main-plan', {
+    url: '/main/plan',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/main-plan.html',
+        controller: 'MainPlanCtrl'
+      }
+    }
+  })
+  .state('tab.main-purchase', {
+    url: '/main/purchase',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/main-purchase.html',
+        controller: 'MainPurchaseCtrl'
+      }
+    }
+  })
   .state('tab.main', {
     url: '/main',
     views: {

@@ -1,0 +1,24 @@
+<ion-view view-title="我的采购计划" >
+<ion-content class="padding">
+<button class="button  button-full button-light" style="color: grey;border:1px solid #ddd">
+	<i class="icon ion-ios-location-outline"></i>
+	下沙农贸市场
+</button>
+<ion-list>
+<ion-item  ng-repeat="purchase in Purchases">
+<div class="item-thumbnail-left item-icon-right">
+<img ng-src="{{purchase.avatar}}">
+<h3 class="item-icon-right">{{purchase.name}}<i class="ion-ios-location" style="margin: 0 1px 0 15px"></i><span>{{purchase.distance}}</span>km</h3>
+<div id="myStar" style="margin: 0 0 5px 0;background:url({{purchase.star}}) no-repeat;background-size: 100%"></div>
+<p span style="font-size: 10px;">{{purchase.address}}<span style="margin: 3px;font-size: 8px;">月成交<span>{{purchase.deal}}</span>单</span></p>
+<i class="icon ion-ios-telephone balanced" style="padding-bottom: 90px"></i>
+</div>
+<div class="item item-icon-left  item-button-right" style="border-left: 0;border-right: 0;border-bottom: 0;">
+	<i class="icon ion-heart"></i>
+	收藏(3)
+	<button class="button button-assertive button-small" style="border:1px solid #FF0000">进入店铺</button>
+</div>
+</ion-item>
+</ion-list>
+</ion-content>
+</ion-view>

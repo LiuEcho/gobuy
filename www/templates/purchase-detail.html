@@ -1,17 +1,28 @@
 <ion-view view-title="{{purchase.name}}" >
 <ion-content class="padding">
-<div class="item-thumbnail-left item-icon-right" style="border: 1px solid #ddd">
+<div class="item-thumbnail-left item-icon-right" style="border: 1px solid #ddd;position:relative;">
 	<img ng-src="{{purchase.avatar}}" style="width: 60px;height: 60px;margin-left:10px;">
 	<p style="display: inline-block;">等级：
 		<div id="myStar" style="margin: 5px 0 0 0;background:url({{purchase.star}}) no-repeat 0px 3px;background-size: 100%;display: inline-block;"></div>
 	</p>
 	<p span style="font-size: 16px;">{{purchase.address}}</p>
-	<i class="icon ion-ios-telephone balanced" style="padding-bottom: 100px;right: 21px;"></i>
+	<i class="icon ion-ios-telephone balanced" style="padding-bottom: 50px;right: 21px;"></i>
 </div>
 <div class="button-bar">
-	<a id="goods" class="button button-light  button-block" style="border: 1px solid #ddd">商品</a>
-	<a id="introduction" class="button button-light  button-block" style="border: 1px solid #ddd">商户介绍</a>
+	<button class="button button-light  button-block" ng-click="ChangeShow(1)" style="border: 1px solid #ddd">商品</button>
+	<button class="button button-light  button-block" ng-click="ChangeShow(0)"  style="border: 1px solid #ddd">商户介绍</button>
 </div>
-<div id="goodsDiv" class="padding" style="position: absolute;">goods</div>
-<div id="introductionDiv" class="padding" style="position: absolute;">introduction</div>
+<ion-list ng-show="ShowModel=='1'" class="list" >
+<ion-item class="item-thumbnail-left item" ng-repeat="good in goods">
+<img ng-src="{{good.picture}}">
+<p>{{good.name}}     <span style="color: grey;font-size: 12px;">月销量{{good.sales}}单</span></p>
+<p style="margin: 10px 0;font-size: 16px;color: #ef473a">￥{{good.price}}/kg</p>
+</ion-item>
+</ion-list>
+<div ng-show="ShowModel=='0'" class="item-thumbnail-left" style="position:relative;" >
+	<img ng-src="{{purchase.authentication}}" style="width: 100px;height: 100px;">
+	<p style="color: grey;font-size: 12px;margin:10px">月销量{{purchase.monthDeal}}单</p>
+	<p style="font-size: 16px;color: #ef473a">新鲜蔬菜，新鲜水产</p>
+</div>
+</ion-content>
 </ion-view>
