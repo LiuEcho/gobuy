@@ -51,4 +51,8 @@ angular.module('starter.controllers', [])
   $scope.ChangeShow = function(val){
     $scope.ShowModel = val;
   }
+  $scope.ShowGoods = 0;
+  $scope.ChangeGoods = function(val){
+    $scope.ShowGoods  = val;
+  }
 });

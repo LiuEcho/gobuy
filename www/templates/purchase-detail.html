@@ -12,13 +12,34 @@
 	<button class="button button-light  button-block" ng-click="ChangeShow(1)" style="border: 1px solid #ddd">商品</button>
 	<button class="button button-light  button-block" ng-click="ChangeShow(0)"  style="border: 1px solid #ddd">商户介绍</button>
 </div>
-<ion-list ng-show="ShowModel=='1'" class="list" >
-<ion-item class="item-thumbnail-left item" ng-repeat="good in goods">
-<img ng-src="{{good.picture}}">
-<p>{{good.name}}     <span style="color: grey;font-size: 12px;">月销量{{good.sales}}单</span></p>
-<p style="margin: 10px 0;font-size: 16px;color: #ef473a">￥{{good.price}}/kg</p>
-</ion-item>
-</ion-list>
+<div ng-show="ShowModel=='1'">
+	<div class="button-bar" style="margin-bottom: 10px;">
+		<button class="button button-small" ng-click="ChangeGoods(0)" style="border: 1px solid #ddd;border-radius: 10px;"><span>大白菜</span></button>
+		<button class="button button-small" ng-click="ChangeGoods(1)" style="border: 1px solid #ddd;border-radius: 10px;"><span>土豆</span></button>
+		<button class="button button-small" ng-click="ChangeGoods(2)" style="border: 1px solid #ddd;border-radius: 10px;"><span>西红柿</span></button>
+	</div>
+	<ion-list class="list" ng-show="ShowGoods=='0'">
+		<ion-item class="item-thumbnail-left item" ng-repeat="good in goods">
+			<img ng-src="{{good.picture}}">
+			<p>{{good.name}}     <span style="color: grey;font-size: 12px;">月销量{{good.sales}}单</span></p>
+			<p style="margin: 10px 0;font-size: 16px;color: #ef473a">￥{{good.price}}/kg</p>
+		</ion-item>
+	</ion-list>
+	<ion-list class="list" ng-show="ShowGoods=='1'">
+		<ion-item class="item-thumbnail-left item" ng-repeat="good in goods">
+			<img ng-src="{{good.picture}}">
+			<p>{{good.name}}     <span style="color: grey;font-size: 12px;">月销量{{good.sales}}单</span></p>
+			<p style="margin: 10px 0;font-size: 16px;color: #ef473a">￥{{good.price}}/kg</p>
+		</ion-item>
+	</ion-list>
+	<ion-list class="list" ng-show="ShowGoods=='2'">
+		<ion-item class="item-thumbnail-left item" ng-repeat="good in goods">
+			<img ng-src="{{good.picture}}">
+			<p>{{good.name}}     <span style="color: grey;font-size: 12px;">月销量{{good.sales}}单</span></p>
+			<p style="margin: 10px 0;font-size: 16px;color: #ef473a">￥{{good.price}}/kg</p>
+		</ion-item>
+	</ion-list>
+</div>
 <div ng-show="ShowModel=='0'" class="item-thumbnail-left" style="position:relative;" >
 	<img ng-src="{{purchase.authentication}}" style="width: 100px;height: 100px;">
 	<p style="color: grey;font-size: 12px;margin:10px">月销量{{purchase.monthDeal}}单</p>

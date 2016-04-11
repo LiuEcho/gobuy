@@ -42,7 +42,7 @@ angular.module('starter.services', [])
     address: '下沙农贸市场',
     distance:'1',
     deal:"100",
-    star:'img/mystar5.png',
+    star:'img/mystar4.png',
     avatar: 'img/purchase.png',
     authentication:'img/authentication.png',
     monthDeal:"1000",
