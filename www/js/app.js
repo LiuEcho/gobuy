@@ -27,7 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/main/market',
     views: {
       'tab-main': {
-        templateUrl: 'templates/main-market.html',
+        templateUrl: 'templates/main/main-market.html',
         controller: 'MainmMarketCtrl'
       }
     }
@@ -36,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/main/purchase',
     views: {
       'tab-main': {
-        templateUrl: 'templates/main-purchase.html',
+        templateUrl: 'templates/main/main-purchase.html',
         controller: 'MainPurchaseCtrl'
       }
     }
@@ -45,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/main/plan/new',
     views: {
       'tab-main': {
-        templateUrl: 'templates/plan-new.html',
+        templateUrl: 'templates/main/plan-new.html',
         controller: 'PlanNewCtrl'
       }
     }
@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/main/plan',
     views: {
       'tab-main': {
-        templateUrl: 'templates/main-plan.html',
+        templateUrl: 'templates/main/main-plan.html',
         controller: 'MainPlanCtrl'
       }
     }
@@ -72,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/my/purchase/:purchaseId',
     views: {
       'tab-my': {
-        templateUrl: 'templates/purchase-detail.html',
+        templateUrl: 'templates/my/purchase-detail.html',
         controller: 'PurchaseDetailCtrl'
       }
     }
@@ -81,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/my/purchase',
     views: {
       'tab-my': {
-        templateUrl: 'templates/my-purchase.html',
+        templateUrl: 'templates/my/my-purchase.html',
         controller: 'MyPurchaseCtrl'
       }
     }
@@ -99,12 +99,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     url: '/order/:orderId',
     views: {
       'tab-order': {
-        templateUrl: 'templates/order-detail.html',
+        templateUrl: 'templates/order/order-detail.html',
         controller: 'OrderDetailCtrl'
       }
     }
   })
-
   .state('tab.order', {
     url: '/order',
     views: {

@@ -5,6 +5,10 @@
 a{
 	text-decoration:none;
 }
+.margin{
+	margin: 10px
+}
+
 .main{
 	background: url(../img/bg.png) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;
 }

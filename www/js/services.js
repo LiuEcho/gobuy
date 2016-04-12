@@ -5,24 +5,39 @@ angular.module('starter.services', [])
     id: 0,
     name: '白菜',
     peice: '12.5',
-    face: 'img/pic.png'
+    face: 'img/pic.png',
+    amount:110,
+    remark:"要新鲜",
+    state:"交易成功",
+    type:10,
+    money:11100,
+    time:"2016年4月12日23:42:47"
   }, {
     id: 1,
     name: '土豆',
    peice: '12.5',
-    face: 'img/pic.png'
+    face: 'img/pic.png',
+    amount:120,
+    remark:"要新鲜新鲜",
+    state:"交易成功",
+    type:10,
+    money:11100,
+    time:"2016年4月12日23:42:47"
   }, {
     id: 2,
     name: '西红柿',
    peice: '12.5',
-    face: 'img/pic.png'
+    face: 'img/pic.png',
+    amount:130,
+    remark:"要足量",
+    state:"交易成功",
+    type:10,
+    money:11100,
+    time:"2016年4月12日23:42:47"
   }];
   return {
     all: function() {
       return Orders;
-    },
-    remove: function(order) {
-      Orders.splice(Orders.indexOf(order), 1);
     },
     get: function(orderId) {
       for (var i = 0; i < Orders.length; i++) {
