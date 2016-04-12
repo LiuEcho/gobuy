@@ -1,0 +1,45 @@
+<ion-view view-title="新增采购模板">
+<ion-content class="padding">
+<label class="item item-input">
+	<input type="text" placeholder="输入模板名字" />
+</label>
+<label class="item item-input">
+	<button class="button button-small" ng-click="openTimePicker()" style="border: 1px solid #ddd">选择时间</button>
+	<span style="display: inline-block;width: 100px;" class="center">{{startTime}}</span>
+	<span style="display: inline-block;width: 30px;" class="center">至</span>
+	<span style="display: inline-block;width: 100px;" class="center">{{endTime}}</span>
+</label>
+<label class="item item-input">
+	<input type="text" placeholder="输入收货地址" />
+</label>
+<a class="item item-icon-left item-icon-right">
+	<i class="icon ion-plus-circled assertive" style="font-size: 24px;"></i>
+	<h2>品种</h2>
+	<i class="icon ion-ios-arrow-right"  style="font-size: 24px;"></i>
+</a>
+<li class="item item-checkbox checkbox-dark item-thumbnail-left">
+	<label class="checkbox" >
+		<input type="checkbox" >
+	</label>
+	<img src="img/pic.png" style="width: 80px;height: 80px;">
+	<div style="position: absolute;display: inline-block;" class="padding">
+		<b style="margin-left: 10px;">大白菜</b>
+		<p style="margin: 10px;">单位：kg</p>
+		<p style="margin-left: 10px;">
+			<span >数量：</span>
+			<button style="background: white;border:1px solid #ddd;border-radius:5px 0 0 5px" ng-click="add()">－</button>
+			<span style="border-top:1px solid #ddd;border-bottom:1px solid #ddd;display: inline-block;padding: 1px;">{{num}}</span>
+			<button style="background: white;border:1px solid #ddd;border-radius:0 5px 5px 0" ng-click="subtract()">＋</button>
+		</p>
+	</div>
+</li>
+</ion-content>
+<ion-footer-bar class="checkbox-assertive">
+<label class="checkbox" >
+	<input type="checkbox" >
+</label>
+<b class="padding" style="font-size: 16px;">全选</b>
+<span class="padding">总计：10个品种</span>
+<button class="button button-assertive" style="position: absolute;right: 10px">生成采购计划</button>
+</ion-footer-bar>
+</ion-view>
