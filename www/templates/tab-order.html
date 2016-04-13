@@ -1,25 +1,27 @@
 <ion-view view-title="订单">
-  <ion-content>
-  <div class="button-bar">
-  <button class="button" ng-click="ChangeShow(0)">1</button>
-  <button class="button" ng-click="ChangeShow(1)">2</button>
-  <button class="button" ng-click="ChangeShow(2)">3</button>
+<div class="bar bar-subheader">
+<div class="row" style="padding:0">
+  <button class="button col" ng-click="ChangeShow(0)" style="border: 1px solid #ddd;margin: 0 10px;"><span>进行中</span></button>
+  <button class="button col" ng-click="ChangeShow(1)" style="border: 1px solid #ddd;margin: 0 10px;"><span>待确认</span></button>
+  <button class="button col" ng-click="ChangeShow(2)" style="border: 1px solid #ddd;margin: 0 10px;"><span>已完成</span></button>
 </div>
-    <div class="list">
-      <div ng-show="showOrders == 0">
-          <div ng-repeat="order in Orders" style="margin-bottom: 10px;">
-              <p class="margin"><b>订单编号：{{order.id}}</b></p>
-              <div style="background-color: #E2E2E2;padding:1px 10px">
-                    <p class="margin"><span style="color: grey">品种数：{{order.type}}</span> <span style="position: absolute;right: 15px;color:green">{{order.state}}</span></p>
-                    <p class="margin"><span style="color: grey">采购量：{{order.amount}}千克</span></p>
-                    <p class="margin" style="color: red;font-size: 16px;">采购总金额：￥{{order.money}}</p>
-                    <a class="button button-block button-assertive"  href="#/tab/order/{{order.id}}">查看详情</a>
-              </div>
-              <div class="center padding" style="color: grey;background-color: #EDEDED">
-                    {{order.time}}
-              </div>
-          </div>
+</div>
+<ion-content>
+<div class="list" style="margin-top:44px;">
+  <div ng-show="showOrders == 0">
+    <div ng-repeat="order in Orders" style="margin-bottom: 10px;">
+      <p class="margin"><b>订单编号：{{order.id}}</b></p>
+      <div style="background-color: #E2E2E2;padding:1px 10px">
+        <p class="margin"><span style="color: grey">品种数：{{order.type}}</span> <span style="position: absolute;right: 15px;color:green">{{order.state}}</span></p>
+        <p class="margin"><span style="color: grey">采购量：{{order.amount}}千克</span></p>
+        <p class="margin" style="color: red;font-size: 16px;">采购总金额：￥{{order.money}}</p>
+        <a class="button button-block button-assertive"  href="#/tab/order/{{order.id}}">查看详情</a>
+      </div>
+      <div class="center padding" style="color: grey;background-color: #EDEDED">
+        {{order.time}}
       </div>
     </div>
-  </ion-content>
+  </div>
+</div>
+</ion-content>
 </ion-view>

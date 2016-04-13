@@ -3,37 +3,84 @@ angular.module('starter.services', [])
 .factory('Orders', function() {
   var Orders = [{
     id: 0,
-    name: '白菜',
-    peice: '12.5',
-    face: 'img/pic.png',
+    name: '订单1',
     amount:110,
-    remark:"要新鲜",
     state:"交易成功",
-    type:10,
-    money:11100,
-    time:"2016年4月12日23:42:47"
+    type:2,
+    money:1120,
+    time:"2016年4月12日23:42:47",
+    location:"物流中心批发市场",
+    goods:[{
+      id:0,
+      name:"白菜",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜",
+      price:1.6,
+      num:958.4
+    },
+    {
+      id:0,
+      name:"土豆",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜",
+      price:1.6,
+      num:958.4
+    }]
   }, {
     id: 1,
-    name: '土豆',
-   peice: '12.5',
-    face: 'img/pic.png',
+    name: '订单2',
     amount:120,
-    remark:"要新鲜新鲜",
     state:"交易成功",
-    type:10,
-    money:11100,
-    time:"2016年4月12日23:42:47"
+    type:2,
+    money:1120,
+    time:"2016年4月12日23:42:47",
+    location:"物流中心批发市场",
+    goods:[{
+      id:0,
+      name:"白菜",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜新鲜",
+      price:1.6,
+      num:958.4
+    },
+    {
+      id:0,
+      name:"土豆",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜新鲜",
+      price:1.6,
+      num:958.4
+    }]
   }, {
     id: 2,
-    name: '西红柿',
-   peice: '12.5',
-    face: 'img/pic.png',
+    name: '订单3',
     amount:130,
     remark:"要足量",
     state:"交易成功",
-    type:10,
-    money:11100,
-    time:"2016年4月12日23:42:47"
+    type:2,
+    money:1120,
+    time:"2016年4月12日23:42:47",
+    location:"物流中心批发市场",
+    goods:[{
+      id:0,
+      name:"白菜",
+      face: 'img/pic.png',
+      amount:599,
+      price:1.6,
+      num:958.4
+    },
+    {
+      id:0,
+      name:"土豆",
+      face: 'img/pic.png',
+      amount:599,
+      price:1.6,
+      num:958.4
+    }]
   }];
   return {
     all: function() {
@@ -119,21 +166,21 @@ angular.module('starter.services', [])
     todayPrice: '12.22',
     todaySales: '1231',
     referencePrice: '12.11',
-     picture:'img/pic.png',
+    picture:'img/pic.png',
     total:1211
   }, {
     id: 1,
     todayPrice: '17.42',
     todaySales: '2231',
     referencePrice: '13.13',
-     picture:'img/pic.png',
+    picture:'img/pic.png',
     total:1211
   }, {
     id: 2,
     todayPrice: '7.2',
     todaySales: '1888',
     referencePrice: '14.12',
-     picture:'img/pic.png',
+    picture:'img/pic.png',
     total:1211
   }];
   return {

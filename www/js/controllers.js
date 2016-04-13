@@ -6,9 +6,6 @@ angular.module('starter.controllers', [])
 .controller('OrderCtrl', function($scope, Orders) {
   $scope.showOrders = 0;
   $scope.Orders = Orders.all();
-  $scope.remove = function(order) {
-    Orders.remove(order);
-  };
   $scope.ChangeShow = function(val){
     $scope.showOrders = val;
   }
@@ -16,6 +13,7 @@ angular.module('starter.controllers', [])
 
 .controller('OrderDetailCtrl', function($scope, $stateParams, Orders) {
   $scope.order = Orders.get($stateParams.orderId);
+  $scope.Goods = $scope.order.goods;
 })
 
 .controller('MyCtrl', function($scope) {
