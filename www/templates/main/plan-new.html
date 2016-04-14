@@ -12,8 +12,8 @@
 <label class="item item-input">
 	<input type="text" placeholder="输入收货地址" />
 </label>
-<a class="item item-icon-left item-icon-right">
-	<i class="icon ion-plus-circled assertive" style="font-size: 24px;"></i>
+<a class="item item-icon-left item-icon-right" href="#/tab/main/plan/new/goodslists">
+	<i class="icon ion-plus-circled dark" style="font-size: 24px;"></i>
 	<h2>品种</h2>
 	<i class="icon ion-ios-arrow-right"  style="font-size: 24px;"></i>
 </a>
@@ -27,14 +27,14 @@
 		<p style="margin: 10px;">单位：kg</p>
 		<p style="margin-left: 10px;">
 			<span >数量：</span>
-			<button style="background: white;border:1px solid #ddd;border-radius:5px 0 0 5px" ng-click="add()">－</button>
+			<button style="background: white;border:1px solid #ddd;border-radius:5px 0 0 5px" ng-click="subtract()">－</button>
 			<span style="border-top:1px solid #ddd;border-bottom:1px solid #ddd;display: inline-block;padding: 1px;">{{num}}</span>
-			<button style="background: white;border:1px solid #ddd;border-radius:0 5px 5px 0" ng-click="subtract()">＋</button>
+			<button style="background: white;border:1px solid #ddd;border-radius:0 5px 5px 0" ng-click="add()">＋</button>
 		</p>
 	</div>
 </li>
 </ion-content>
-<ion-footer-bar class="checkbox-assertive">
+<ion-footer-bar class="checkbox-dark">
 <label class="checkbox" >
 	<input type="checkbox" >
 </label>

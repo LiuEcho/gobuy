@@ -41,6 +41,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
       }
     }
   })
+  .state('tab.goodslists', {
+      url: '/main/plan/new/goodslists',
+      views: {
+        'tab-main': {
+          templateUrl: 'templates/goods/goodslists.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
   .state('tab.plan-new', {
     url: '/main/plan/new',
     views: {

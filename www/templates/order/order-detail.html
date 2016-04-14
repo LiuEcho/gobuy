@@ -1,10 +1,10 @@
 <ion-view view-title="详情" >
-<ion-content class="padding">
-<ul class="list">
-	<div ng-repeat="good in Goods">	
+<ion-content >
+<div class="list">
+	<div ng-repeat="good in Goods" class="padding">	
 		<li class="item item-thumbnail-left" >
 			<img ng-src="{{good.face}}">
-			<p><span style="font-size: 18px;margin-left: 20px;" class="balanced">{{good.name}}</span></p>
+			<p><span style="font-size: 18px;margin-left: 15px;" class="balanced">{{good.name}}</span></p>
 			<p  style="font-size: 11px;margin-left: 25px;"><span>采购量：<span class="assertive">{{good.amount}}</span>千克</span></p>
 			<p  style="font-size: 11px;margin-left: 25px;">采购价：<span class="assertive">{{good.price}}</span>元/千克</p>
 			<p  style="font-size: 11px;margin-left: 25px;">单品合计价格：<span class="assertive">{{good.num}}</span>元</p>
@@ -13,23 +13,28 @@
 			备注：{{good.remark}}
 		</div>
 	</div>	
-	<div class="padding" style="position: relative;">
-		<div class="padding" style="border-bottom: 1px solid #ddd;">
+	<div style="position: relative;">
+		<div style="border-bottom: 1px solid #ddd;padding:0 10px;">
 			<div id="myPerson" style="display: inline-block;width: 40px;height: 40px;"></div>
-			<div class="margin" style="display: inline-block;position: absolute;top:25px">小红</div>
+			<div class="margin" style="display: inline-block;position: absolute;top:5px">小红</div>
 			<span class="assertive" style="position: absolute;right: 10px;height: 47px;line-height: 47px">已发货
 				<a class="button button-icon icon  ion-ios-telephone balanced"></a>
 			</span>
 		</div>	
+		
 		<div style="position: relative;margin: 20px 0;padding-left: 22px;">
 			<i class="icon ion-ios-location"></i>
-			<span class="margin">位置：{{order.location}}</span>
+			<span class="margin">发货地址：{{order.location}}</span>
+		</div>
+		<div style="position: relative;margin: 20px 0;padding-left: 22px;">
+			<i class="icon ion-ios-location"></i>
+			<span class="margin">收货地址：{{order.location}}</span>
 		</div>
 		<div style="position: relative;padding-left: 21px;">
 			<i class="icon ion-social-yen"></i>
 			<span class="margin">总金额：<span class="assertive">{{order.money}}</span>元</span>
 		</div>
 	</div>
-</ul>
+</div>
 </ion-content>
 </ion-view>

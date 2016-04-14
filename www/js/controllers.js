@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
     $scope.num = $scope.num+1;
   }
   $scope.subtract = function(){
-    $scope.num = $scope.num+1;
+    $scope.num = $scope.num-1;
   }
 })
 
@@ -84,4 +84,19 @@ angular.module('starter.controllers', [])
   $scope.ChangeGoods = function(val){
     $scope.ShowGoods  = val;
   }
-});
+})
+.controller('PlaylistsCtrl', function($scope,$ionicSideMenuDelegate) {
+  $scope.toggleRight = function() {
+    $ionicSideMenuDelegate.toggleRight();
+  };
+  $scope.goodslists = [
+    { type: '蔬菜', id: 0,content:[{id:0,name:"小白菜",picture:'img/pic.png',},{id:1,name:"土豆",picture:'img/pic.png'},{id:2,name:"西红柿",picture:'img/pic.png'}] },
+    { type: '肉类', id: 1,content:[{id:0,name:"猪肉",picture:'img/pic.png'},{id:1,name:"牛肉",picture:'img/pic.png'},{id:2,name:"羊肉",picture:'img/pic.png'}] },
+    { type: '水果', id: 2,content:[{id:0,name:"西瓜",picture:'img/pic.png'},{id:1,name:"苹果",picture:'img/pic.png'},{id:2,name:"香蕉",picture:'img/pic.png'}] },
+  ];
+  $scope.goods = $scope.goodslists[0].content;
+   $scope.changeType = function(val) {
+      $scope.goods = $scope.goodslists[val].content;
+     $ionicSideMenuDelegate.toggleRight();
+  };
+})

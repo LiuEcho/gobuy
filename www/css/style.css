@@ -60,6 +60,7 @@ a{
 }
 #myNum > div{
 	background-color:black;margin: 0 0 0 2px;
-	#myList{
-		margin-top: 5px;
-	}
+}
+#myList{
+	margin-top: 5px;
+}

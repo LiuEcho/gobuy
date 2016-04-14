@@ -70,6 +70,7 @@ angular.module('starter.services', [])
       name:"白菜",
       face: 'img/pic.png',
       amount:599,
+      remark:"要新鲜新鲜",
       price:1.6,
       num:958.4
     },
@@ -78,6 +79,7 @@ angular.module('starter.services', [])
       name:"土豆",
       face: 'img/pic.png',
       amount:599,
+      remark:"要新鲜新鲜",
       price:1.6,
       num:958.4
     }]
