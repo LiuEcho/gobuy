@@ -6,19 +6,32 @@
 	<ion-side-menu-content>
 		<ion-content>
 			<ion-list>
-				<div class="row">
-					<a ng-repeat="good in goods" class="col col-33 padding" style="">
-						<img ng-src="{{good.picture}}" style="width:100%">
-						<p class="center" >{{good.name}}</p>
-					</a>
+				<div ng-repeat="good in goods" class="col-33" style="float: left;position: relative;" ng-click=goodsSelect({{good.id}})>
+					<div id="goodsDiv" >
+						<img ng-src="{{good.picture}}">
+						<p class="center" style="margin-bottom: 3px;">{{good.name}}</p>
+					</div>
+					<div  ng-show="good.selected == true" id="selectedDiv">
+						<div>	
+							<p class="center" style="padding-top: 25px;font-size: 25px;"><i class="icon ion-checkmark-round"></i></p>
+							<p class="center">已选择</p>
+						</div>
+					</div>
 				</div>
 			</ion-list>
 		</ion-content>
 	</ion-side-menu-content>
 	<ion-side-menu side="right" width="125">
-		<ion-item ng-repeat="goods in goodslists" ng-click=changeType({{goods.id}})>
-			{{goods.type}}
-		</ion-item>
+		<ion-content>
+			<ion-item ng-repeat="goods in goodslists" ng-click=changeType({{goods.id}})>
+				{{goods.type}}
+			</ion-item>
+		</ion-content>
 	</ion-side-menu>
 </ion-side-menus>
+</ion-content>
+<ion-footer-bar>
+	<span class="margin">总计：10个品种</span>
+	<button class="button button-assertive" style="position: absolute;right: 10px">确认选择</button>
+</ion-footer-bar>
 </ion-view>

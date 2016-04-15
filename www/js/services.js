@@ -10,6 +10,9 @@ angular.module('starter.services', [])
     money:1120,
     time:"2016年4月12日23:42:47",
     location:"物流中心批发市场",
+    recipienter:"老王",
+    phone:17854584259,
+    planName:"模板1",
     goods:[{
       id:0,
       name:"白菜",
@@ -37,34 +40,9 @@ angular.module('starter.services', [])
     money:1120,
     time:"2016年4月12日23:42:47",
     location:"物流中心批发市场",
-    goods:[{
-      id:0,
-      name:"白菜",
-      face: 'img/pic.png',
-      amount:599,
-      remark:"要新鲜新鲜",
-      price:1.6,
-      num:958.4
-    },
-    {
-      id:0,
-      name:"土豆",
-      face: 'img/pic.png',
-      amount:599,
-      remark:"要新鲜新鲜",
-      price:1.6,
-      num:958.4
-    }]
-  }, {
-    id: 2,
-    name: '订单3',
-    amount:130,
-    remark:"要足量",
-    state:"交易成功",
-    type:2,
-    money:1120,
-    time:"2016年4月12日23:42:47",
-    location:"物流中心批发市场",
+    recipienter:"老王王",
+    phone:17854584259,
+    planName:"模板2",
     goods:[{
       id:0,
       name:"白菜",

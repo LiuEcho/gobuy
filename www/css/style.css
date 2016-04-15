@@ -64,3 +64,19 @@ a{
 #myList{
 	margin-top: 5px;
 }
+
+
+
+#goodsDiv{
+	border: 1px solid #ddd;border-radius: 5px;margin: 2px;
+}
+#goodsDiv > img{
+	width:100%;border-radius: 5px 5px 0 0;max-height: 100px;
+}
+#selectedDiv{
+	width:100%;height: 100px;position: absolute;top: 3px;color: white;padding: 0 3px;
+}
+#selectedDiv > div
+{
+	background-color:rgba(68, 68, 68,0.5);height: 100%;border-radius: 5px 5px 0 0;
+}

@@ -22,17 +22,26 @@
 			</span>
 		</div>	
 		
-		<div style="position: relative;margin: 20px 0;padding-left: 22px;">
+		<div style="position: relative;margin: 20px 0;padding-left: 28px;">
 			<i class="icon ion-ios-location"></i>
 			<span class="margin">发货地址：{{order.location}}</span>
 		</div>
-		<div style="position: relative;margin: 20px 0;padding-left: 22px;">
+		<div style="position: relative;margin: 20px 0;padding-left: 28px;">
 			<i class="icon ion-ios-location"></i>
 			<span class="margin">收货地址：{{order.location}}</span>
 		</div>
-		<div style="position: relative;padding-left: 21px;">
+		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
+			<i class="icon ion-person"></i>
+			<span class="margin">收货人：{{order.recipienter}}</span>			
+			<span class="margin">电话：{{order.phone}}</span>
+		</div>
+		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
 			<i class="icon ion-social-yen"></i>
 			<span class="margin">总金额：<span class="assertive">{{order.money}}</span>元</span>
+		</div>
+		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
+			<i class="icon ion-gear-a"></i>
+			<span class="margin">模板名：<span class="assertive">{{order.planName}}</span></span>
 		</div>
 	</div>
 </div>
