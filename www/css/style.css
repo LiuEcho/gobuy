@@ -28,7 +28,7 @@ a{
 	width: 100%;
 }
 #mainMiddle > a{
-	background-color:rgba(68, 68, 68,0.5);text-shadow:1px 2px 0 #444;
+	background-color:rgba(68, 68, 68,0.5);text-shadow:1px 2px 0 #444;width: 100%;margin:2px;
 }
 .button-oversized{
 	font-size: 40px;
@@ -43,8 +43,11 @@ a{
 #myMain{
 	background: url(../img/myMainBg.jpeg) no-repeat ; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;position: relative;
 }
+#myButton > a{
+	color: white;border: 1px solid grey;margin: 4px;border-radius: 5px;
+}
 #myPerson{
-	margin:5px auto;width: 60px;height: 60px;background: url(../img/person.png) no-repeat ; -webkit-background-size: 100%;-moz-background-size: 100%;background-size: 100%;
+	margin:10px auto;width: 60px;height: 60px;background: url(../img/person.png) no-repeat ; -webkit-background-size: 100%;-moz-background-size: 100%;background-size: 100%;
 }
 #myPersonName  {
 	font-size: 15px;
@@ -56,13 +59,16 @@ a{
 	margin:10px auto;height: 20px;width:100px;
 }
 #myNum {
-	position: absolute;bottom: 0;
+	position: absolute;bottom: 0px;
 }
 #myNum > div{
 	background-color:black;margin: 0 0 0 2px;
 }
 #myList{
-	margin-top: 5px;
+	margin-top: 10px;
+}
+#myList > a{
+	padding-top:10px;padding-bottom: 10px; 
 }
 
 

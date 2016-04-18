@@ -1,6 +1,23 @@
 <ion-view view-title="我">
-<ion-content class="padding">
-<div id="myMain" style="height: 36vh;padding:1px;">
+<ion-content >
+<div id="myMain" style="height: 46vh;padding:1px;">
+	<div class="row center" id="myButton">
+		<a class="col">
+			<span style="font-size:15px">
+				<span >充值</span>
+			</span>
+		</a>
+		<a class="col">
+			<span style="font-size:15px">
+				<span >订单</span>
+			</label>
+		</a>
+		<a class="col">
+			<span style="font-size:15px">
+				<span >消息</span>
+			</span>
+		</a>
+	</div>
 	<div id="myPerson">		
 	</div>
 	<div class="light center" id="myPersonName">
@@ -26,22 +43,26 @@
 </div>
 
 <div class="list card" id="myList">
-	<ion-item class="item item-icon-left item-icon-right" href="#/tab/my/purchase">
+	<a class="item item-icon-left item-icon-right" href="#/tab/my/purchase">
 		<i class="icon ion-ios-cart calm"></i>
 		<h2 class="center" style="font-weight: bold;">我的供应商</h2>
 		<i class="icon ion-ios-arrow-right" style="color: #C5C4C8"></i>
-	</ion-item>
-	<ion-item class="item item-icon-left item-icon-right" href="#">
+	</a>
+	<a class="item item-icon-left item-icon-right" href="#">
 		<i class="icon ion-ios-telephone balanced"></i>
 		<h2 class="center" style="font-weight: bold;">联系客服</h2>
 		<i class="icon ion-ios-arrow-right" style="color: #C5C4C8"></i>
-	</ion-item>
-	<ion-item class="item item-icon-left item-icon-right" href="#">
+	</a>
+	<a class="item item-icon-left item-icon-right" href="#">
 		<i class="icon ion-edit dark"></i>
 		<h2 class="center" style="font-weight: bold;">意见反馈</h2>
 		<i class="icon ion-ios-arrow-right" style="color: #C5C4C8"></i>
-	</ion-item>
+	</a>
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-person-stalker positive"></i>
+		<h2 class="center" style="font-weight: bold;">关于我们</h2>
+		<i class="icon ion-ios-arrow-right" style="color: #C5C4C8"></i>
+	</a>
 </div>
-
 </ion-content>
 </ion-view>
