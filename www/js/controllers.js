@@ -57,6 +57,18 @@ angular.module('starter.controllers', [])
     enableFriends: true
   }
 })  
+.controller('MyRechargeCtrl', function($scope) {
+
+})  
+.controller('MyMessageCtrl', function($scope) {
+  $scope.ShowMessage = 0;
+  $scope.ChangeShow = function(val){
+    $scope.ShowMessage = val;
+  }
+})  
+.controller('MyPurchaseCtrl', function($scope,Purchases) {
+  $scope.Purchases = Purchases.all();
+})
 .controller('PlanNewCtrl', function ($scope, ionicTimePicker) {
   //时间
    $scope.startTime = new Date().getHours() + "时" + new Date().getMinutes() + "分";
@@ -106,9 +118,6 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('MyPurchaseCtrl', function($scope,Purchases) {
-  $scope.Purchases = Purchases.all();
-})
 .controller('PurchaseDetailCtrl', function($scope, $stateParams, Purchases) {
   $scope.ShowModel = 1;
   $scope.purchase = Purchases.get($stateParams.purchaseId);

@@ -113,6 +113,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
       }
     }
   })
+  .state('tab.my-recharge', {
+    url: '/my/recharge',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my/my-recharge.html',
+        controller: 'MyRechargeCtrl'
+      }
+    }
+  })
+   .state('tab.my-message', {
+    url: '/my/message',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my/my-message.html',
+        controller: 'MyMessageCtrl'
+      }
+    }
+  })
   .state('tab.my', {
     url: '/my',
     views: {
@@ -139,10 +157,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
         controller: 'OrderCtrl'
       }
     }
-  });
+  })
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login/tab-signin.html',
+    controller:'LoginCtrl'
+  })
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'templates/login/tab-signup.html',
+  })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/main');
+  $urlRouterProvider.otherwise('login');
 
 })
 
