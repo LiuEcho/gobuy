@@ -23,6 +23,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
+   .state('tab.market-detail', {
+    url: '/main/market/:purchaseId',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/my/purchase-detail.html',
+        controller: 'PurchaseDetailCtrl'
+      }
+    }
+  })
   .state('tab.main-market', {
     url: '/main/market',
     views: {
@@ -50,6 +59,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
         }
       }
     })
+  .state('tab.plan-detail', {
+    url: '/main/plan/detail',
+    views: {
+      'tab-main': {
+        templateUrl: 'templates/main/plan-detail.html',
+        controller: 'PlanNewCtrl'
+      }
+    }
+  })
   .state('tab.plan-new', {
     url: '/main/plan/new',
     views: {

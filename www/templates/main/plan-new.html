@@ -4,7 +4,7 @@
 	<input type="text" placeholder="输入模板名字" />
 </label>
 <label class="item item-input">
-	<button class="button button-small" ng-click="openTimePicker()" style="border: 1px solid #ddd">选择时间</button>
+	<button class="button button-small" ng-click="openTimePicker()" style="border: 1px solid #ddd">选择到货时间</button>
 	<span style="display: inline-block;width: 100px;" class="center">{{startTime}}</span>
 	<span style="display: inline-block;width: 30px;" class="center">至</span>
 	<span style="display: inline-block;width: 100px;" class="center">{{endTime}}</span>
@@ -25,8 +25,11 @@
 	<div style="position: absolute;display: inline-block;">
 		<p  style="margin-left: 5px;">
 			<span style="font-size: 16px;font-weight: bold;">大白菜</span>
-			<button class="button button-assertive button-small" style="margin:-5px 20px;">删除</button></p>
-		<p style="margin: 6px;">单位：kg</p>
+			<button class="button button-assertive button-small" style="margin:-5px 20px;">删除</button>
+		</p>
+		<p style="margin: 6px;">
+			<span >单位：kg</span>
+		</p>
 		<p style="margin-left: 5px;">
 			<span >数量：</span>
 			<button style="background: white;border:1px solid #ddd;border-radius:5px 0 0 5px" ng-click="subtract()">－</button>

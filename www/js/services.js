@@ -91,15 +91,15 @@ angular.module('starter.services', [])
     goods:[{
       id:0,
       name:"大白菜",
-      price:5.60,
+      price:11.60,
       picture:'img/pic.png',
-      sales:100
+      sales:103
     },{
       id:0,
       name:"高级大白菜",
-      price:7.60,
+      price:8.60,
       picture:'img/pic.png',
-      sales:110
+      sales:120
     }]
   },{
     id: 1,
@@ -120,9 +120,9 @@ angular.module('starter.services', [])
     },{
       id:0,
       name:"高级大白菜",
-      price:7.60,
+      price:7.70,
       picture:'img/pic.png',
-      sales:110
+      sales:111
     }]
   }];
   return {
