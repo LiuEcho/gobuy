@@ -1,5 +1,41 @@
 'use strict';
 angular.module('starter.controllers', [])
+.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopover, $timeout,  $location, $ionicPopup,$state) {
+ // Form data for the login modal
+  $scope.loginData = {};
+
+  //--------------------------------------------
+   $scope.login = function(user) {
+      
+    if(typeof(user)=='undefined'){
+      $scope.showAlert('请填写用户名和密码！'); 
+      return false;
+    }
+
+    if(user.username=='d' && user.password=='d'){
+       $state.go('tab.main');
+    }else{
+      $scope.showAlert('错误的用户名或密码！'); 
+    }
+    
+  };
+  //--------------------------------------------
+  $scope.logout = function() {   $location.path('/login');   };
+  //--------------------------------------------
+   // An alert dialog
+   $scope.showAlert = function(msg) {
+     var alertPopup = $ionicPopup.alert({
+     title: '提示',
+     template: msg,
+     buttons: [
+       {
+        text:'确认',
+         type: 'button-assertive'
+       }]
+     });
+   };
+  //--------------------------------------------
+})
 
 .controller('MainCtrl', function($scope) {})
 
