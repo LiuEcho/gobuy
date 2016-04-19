@@ -1,26 +1,24 @@
-<div class="tabs-striped  tabs-background-assertive tabs-color-light">
-    <div class="tabs">
-      <a class="tab-item " href="#/login"><i class="icon ion-unlocked"></i> Login </a>
-      <a class="tab-item active" href="#/signup"> <i class="icon ion-person"></i> Sing Up </a>
-    </div>
-  </div>
+<div class="tabs-striped  tabs-background-balanced tabs-color-light">
+	<div class="tabs">
+		<a class="tab-item " href="#/login"><i class="icon ion-unlocked"></i> Login </a>
+		<a class="tab-item active" href="#/signup"> <i class="icon ion-person"></i> Sing Up </a>
+	</div>
+</div>
 
 <ion-view view-title="注册" class="loginBg" hide-nav-bar="true" >
-  <ion-content class="padding">
+<ion-content class="padding">
 
-  <div class="row responsive-sm padding remvoeBP">
-	  <div class="col">
-		   <div class="app-logo"><img src="img/logo.png"></div>
-			
-			<div class="list list-inset removePM">
-			  <label class="item item-input"><input type="text" placeholder="Full Name"> </label>
-			  <label class="item item-input"><input type="text" placeholder="Email Address"> </label>
-			  <label class="item item-input"><input type="text" placeholder="Phone Number"> </label>
-			  <label class="item item-input"><input type="password" placeholder="Password"> </label>
-			</div>
-
-			<div class="loginButton"><button class="button ion-person button-block button-balanced"> Register </button>  </div>
-	  </div>
-  </div>
-  </ion-content>
+<div class="row responsive-sm padding remvoeBP">
+	<div class="col">
+		<div class="app-logo">
+			<img src="img/logo.png">
+		</div>			
+		<div class="list list-inset removePM">
+			<label class="item item-input"><i class="icon ion-person" style="width: 20px;"></i><input type="text" ng-model="user.username" placeholder="请输入账号" > </label>
+			<label class="item item-input" style="padding-left: 19px;"><i class="icon ion-key" style="width: 17px;"></i><input type="password" ng-model="user.password" placeholder="请输入密码" > </label>
+		</div>		
+		<div class="loginButton"><button class="button ion-person button-block button-assertive"> 注册 </button>  </div>
+	</div>
+</div>
+</ion-content>
 </ion-view>

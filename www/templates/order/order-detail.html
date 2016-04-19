@@ -16,30 +16,29 @@
 	<div style="position: relative;">
 		<div style="border-bottom: 1px solid #ddd;padding:0 10px;">
 			<div id="myPerson" style="display: inline-block;width: 40px;height: 40px;"></div>
-			<div class="margin" style="display: inline-block;position: absolute;top:5px">小红</div>
+			<div style="display: inline-block;position: absolute;top:5px">
+				<p style="margin: 5px 0 0 5px;">小红</p>
+				<p style="font-size: 8px;margin-left:5px;">发货地址：{{order.location}}</p>
+			</div>		
 			<span class="assertive" style="position: absolute;right: 10px;height: 47px;line-height: 47px">已发货
 				<a class="button button-icon icon  ion-ios-telephone balanced"></a>
 			</span>
 		</div>	
 		
-		<div style="position: relative;margin: 20px 0;padding-left: 28px;">
-			<i class="icon ion-ios-location"></i>
-			<span class="margin">发货地址：{{order.location}}</span>
-		</div>
-		<div style="position: relative;margin: 20px 0;padding-left: 28px;">
-			<i class="icon ion-ios-location"></i>
-			<span class="margin">收货地址：{{order.location}}</span>
-		</div>
-		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
+		<div style="position: relative;margin: 15px 0;padding-left: 27px;">
 			<i class="icon ion-person"></i>
 			<span class="margin">收货人：{{order.recipienter}}</span>			
 			<span class="margin">电话：{{order.phone}}</span>
 		</div>
-		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
+		<div style="position: relative;margin: 15px 0;padding-left: 28px;">
+			<i class="icon ion-ios-location"></i>
+			<span class="margin"  style="font-size: 8px">收货地址：{{order.location}}</span>
+		</div>
+		<div style="position: relative;margin: 15px 0;padding-left: 27px;">
 			<i class="icon ion-social-yen"></i>
 			<span class="margin">总金额：<span class="assertive">{{order.money}}</span>元</span>
 		</div>
-		<div style="position: relative;margin: 20px 0;padding-left: 27px;">
+		<div style="position: relative;margin: 15px 0;padding-left: 27px;">
 			<i class="icon ion-gear-a"></i>
 			<span class="margin">模板名：<span class="assertive">{{order.planName}}</span></span>
 		</div>

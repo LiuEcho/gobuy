@@ -6,13 +6,12 @@ angular.module('starter.controllers', [])
 
   //--------------------------------------------
    $scope.login = function(user) {
-      
     if(typeof(user)=='undefined'){
-      $scope.showAlert('请填写用户名和密码！'); 
+      $scope.showAlert('用户名和密码不能为空！'); 
       return false;
     }
 
-    if(user.username=='d' && user.password=='d'){
+    if(user.username=='1' && user.password=='1'){
        $state.go('tab.main');
     }else{
       $scope.showAlert('错误的用户名或密码！'); 
@@ -57,7 +56,7 @@ angular.module('starter.controllers', [])
     enableFriends: true
   }
 })  
-.controller('MyRechargeCtrl', function($scope) {
+.controller('MyChargeCtrl', function($scope) {
 
 })  
 .controller('MyMessageCtrl', function($scope) {

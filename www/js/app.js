@@ -113,12 +113,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
       }
     }
   })
-  .state('tab.my-recharge', {
-    url: '/my/recharge',
+  .state('tab.my-charge', {
+    url: '/my/charge',
     views: {
       'tab-my': {
-        templateUrl: 'templates/my/my-recharge.html',
-        controller: 'MyRechargeCtrl'
+        templateUrl: 'templates/my/my-charge.html',
+        controller: 'MyChargeCtrl'
       }
     }
   })
@@ -128,6 +128,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
       'tab-my': {
         templateUrl: 'templates/my/my-message.html',
         controller: 'MyMessageCtrl'
+      }
+    }
+  })
+    .state('tab.my-share', {
+    url: '/my/share',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my/my-share.html'
       }
     }
   })
