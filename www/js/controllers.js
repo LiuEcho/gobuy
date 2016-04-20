@@ -56,15 +56,46 @@ angular.module('starter.controllers', [])
     enableFriends: true
   }
 })  
-.controller('MyChargeCtrl', function($scope) {
-
-})  
+.controller('MyInformationCtrl', function($scope) {})  
+.controller('MyChargeCtrl', function($scope) {})  
 .controller('MyMessageCtrl', function($scope) {
   $scope.ShowMessage = 0;
   $scope.ChangeShow = function(val){
     $scope.ShowMessage = val;
   }
 })  
+.controller('MyNewCtrl', function($scope,Purchases) {
+  $scope.startTime = new Date().getHours() + "时" + new Date().getMinutes() + "分";
+   $scope.endTime = new Date().getHours()+1 + "时" + new Date().getMinutes() + "分";
+  var ipObj1 = {
+    callback: function (val) {      //Mandatory
+      if (typeof (val) === 'undefined') {
+        $scope.time='未选择时间'
+      } else {
+        var selectedTime = new Date(val * 1000);
+        //console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
+        $scope.startTime = selectedTime.getUTCHours() + '时' + selectedTime.getUTCMinutes() + '分';
+        $scope.endTime = selectedTime.getUTCHours()+1 + '时' + selectedTime.getUTCMinutes() + '分';
+      }
+    },
+    inputTime: (((new Date()).getHours() * 60 * 60) + ((new Date()).getMinutes() * 60)),
+    format: 24,         //Optional
+    step: 1,           //Optional
+    setLabel: '确定',
+    closeLabel:'关闭'    //Optional
+  };
+  $scope.openTimePicker = function(){
+    ionicTimePicker.openTimePicker(ipObj1);
+  }
+  //计数
+  $scope.num = 123;
+  $scope.add = function(){
+    $scope.num = $scope.num+1;
+  }
+  $scope.subtract = function(){
+    $scope.num = $scope.num-1;
+  }
+})
 .controller('MyPurchaseCtrl', function($scope,Purchases) {
   $scope.Purchases = Purchases.all();
 })
@@ -103,9 +134,27 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('MainPlanCtrl', function($scope,Purchases) {
+.controller('MainPlanCtrl', function($scope,Purchases,$ionicPopup) {
   $scope.Purchases = Purchases.all();
+  $scope.showPopup = function(){
+    $ionicPopup.show({
+      template: "<input type='number' ng-model='data.money' style='border:1px solid #ddd'>",
+      title: "是否现在付给订金？",
+      scope: $scope,
+      buttons: [
+        { text: "取消" },
+        {
+          text: "<b>确认</b>",
+          type: "button-assertive",
+          onTap: function(e) {
+            return $scope.data.money;
+          }
+        }
+      ]
+    })
+  }
 })
+
 .controller('MainmMarketCtrl', function($scope,Purchases) {
   $scope.Purchases = Purchases.all();
 })

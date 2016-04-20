@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 angular.module('starter.services', [])
 .factory('Orders', function() {
   var Orders = [{
@@ -14,6 +14,7 @@ angular.module('starter.services', [])
     recipienter:"老王",
     phone:17854584259,
     planName:"模板1",
+    orderState:0,
     goods:[{
       id:0,
       name:"白菜",
@@ -45,6 +46,39 @@ angular.module('starter.services', [])
     recipienter:"老王王",
     phone:17854584259,
     planName:"模板2",
+    orderState:1,
+    goods:[{
+      id:0,
+      name:"白菜",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜新鲜",
+      price:1.6,
+      num:958.4
+    },
+    {
+      id:0,
+      name:"土豆",
+      face: 'img/pic.png',
+      amount:599,
+      remark:"要新鲜新鲜",
+      price:1.6,
+      num:958.4
+    }]
+  }, {
+    id: 2,
+    name: '订单3',
+    amount:120,
+    state:"交易成功",
+    subscription:"未付订金",
+    type:2,
+    money:1120,
+    time:"2016年4月12日23:42:47",
+    location:"物流中心批发市场",
+    recipienter:"老王王王",
+    phone:17854584259,
+    planName:"模板2",
+    orderState:2,
     goods:[{
       id:0,
       name:"白菜",

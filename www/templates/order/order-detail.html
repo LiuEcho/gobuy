@@ -1,5 +1,5 @@
-<ion-view view-title="详情" >
-<ion-content >
+<ion-view view-title="订单详情" >
+<ion-content>
 <div class="list">
 	<div ng-repeat="good in Goods" class="padding">	
 		<li class="item item-thumbnail-left" >
@@ -13,7 +13,7 @@
 			备注：{{good.remark}}
 		</div>
 	</div>	
-	<div style="position: relative;">
+	<div style="position: relative;" class="padding">
 		<div style="border-bottom: 1px solid #ddd;padding:0 10px;">
 			<div id="myPerson" style="display: inline-block;width: 40px;height: 40px;"></div>
 			<div style="display: inline-block;position: absolute;top:5px">
@@ -42,6 +42,9 @@
 			<i class="icon ion-gear-a"></i>
 			<span class="margin">模板名：<span class="assertive">{{order.planName}}</span></span>
 		</div>
+		<button class="button button-assertive button-block" style="margin: 0;line-height:32px;min-height: 32px" ng-show="order.orderState == 0">取消此订单</button>
+		<button class="button button-assertive button-block" style="margin: 0;line-height:32px;min-height: 32px" ng-show="order.orderState == 1">确认收货</button>
+		<button class="button button-assertive button-block" style="margin: 0;line-height:32px;min-height: 32px" ng-show="order.orderState == 2">评价</button>
 	</div>
 </div>
 </ion-content>

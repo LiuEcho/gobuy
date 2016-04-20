@@ -1,16 +1,13 @@
 <ion-view view-title="新增采购模板">
 <ion-content class="padding">
 <label class="item item-input">
-	<input type="text" placeholder="输入模板名字" />
-</label>
-<label class="item item-input">
 	<button class="button button-small" ng-click="openTimePicker()" style="border: 1px solid #ddd">选择到货时间</button>
 	<span style="display: inline-block;width: 100px;" class="center">{{startTime}}</span>
 	<span style="display: inline-block;width: 30px;" class="center">至</span>
 	<span style="display: inline-block;width: 100px;" class="center">{{endTime}}</span>
 </label>
 <label class="item item-input">
-	<input type="text" placeholder="输入收货地址" /><button class="button button-assertive button-small" style="margin-right: 10px;">我的地址</button>
+	<input type="text" placeholder="输入收货地址" />
 </label>
 <a class="item item-icon-left item-icon-right" href="#/tab/main/plan/new/goodslists">
 	<i class="icon ion-plus-circled dark" style="font-size: 24px;"></i>

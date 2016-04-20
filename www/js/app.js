@@ -104,6 +104,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
       }
     }
   })
+  .state('tab.my-information', {
+    url: '/my/information',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my/my-information.html',
+        controller: 'MyInformationCtrl'
+      }
+    }
+  })
+  .state('tab.my-new', {
+    url: '/my/purchase/new/:purchaseId',
+    views: {
+      'tab-my': {
+        templateUrl: 'templates/my/purchase-new.html',
+        controller: 'MyNewCtrl'
+      }
+    }
+  })
   .state('tab.my-purchase', {
     url: '/my/purchase',
     views: {
