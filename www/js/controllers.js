@@ -1,23 +1,23 @@
 'use strict';
 angular.module('starter.controllers', [])
-.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopover, $timeout,  $location, $ionicPopup,$state) {
- // Form data for the login modal
-  $scope.loginData = {};
-
-  //--------------------------------------------
-   $scope.login = function(user) {
-    if(typeof(user)=='undefined'){
-      $scope.showAlert('用户名和密码不能为空！'); 
+.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopover, $timeout,  $location, $ionicPopup,$state,$http) {
+   $scope.user = {};
+     $scope.login = function(user) {
+       if(user.mobileNumber === undefined){
+      $scope.showAlert('手机号码不能为空！'); 
       return false;
     }
+     $http.post("http://121.43.150.79:9090/user/validateUser",{
+                "userTypeCode":3,
+                "mobileNumber":user.mobileNumber,
+                "validateCode":"1234"
+            }).success(function(){
+                    $state.go('tab.main');
+            }).error(function(data){
+                  console.log(data);
+            })
+  }
 
-    if(user.username=='1' && user.password=='1'){
-       $state.go('tab.main');
-    }else{
-      $scope.showAlert('错误的用户名或密码！'); 
-    }
-    
-  };
   //--------------------------------------------
   $scope.logout = function() {   $location.path('/login');   };
   //--------------------------------------------
