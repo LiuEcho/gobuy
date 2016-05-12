@@ -1,5 +1,5 @@
 'use strict';
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ionic-timepicker'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ionic-timepicker','starter.config'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

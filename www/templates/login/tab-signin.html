@@ -24,15 +24,15 @@
 		<div class="list list-inset removePM">
 			<label class="item item-input">
 				<i class="icon ion-iphone" style="width: 16px;"></i>
-				<input type="text" ng-model="user.mobileNumber" placeholder="请输入手机号码" ><button class="button button-balanced button-small" style="margin-right: 7px;width: 100px;">发送短信码</button>
+				<input type="text" ng-model="user.mobileNumber" placeholder="请输入手机号码" >
 			</label>
 			<label class="item item-input" style="padding-left: 16px;">
 				<i class="icon ion-key" style="width: 17px;"></i>
-				<input type="password" ng-model="user.password" placeholder="请输入短信验证码" >
+				<input type="password" ng-model="user.validateCode" placeholder="请输入短信验证码" >
 			</label>
 		</div>
-
-		<div class="loginButton"><button class="button ion-unlocked button-block button-assertive" ng-click="login(user);" > 登录 </button>  </div>
+		<button class="button button-balanced button-block" ng-click="sendMsg(user);">发送短信码</button>
+		<div class="loginButton"><button class="button ion-unlocked button-block button-assertive" ng-click="login(user);" > 登录 </button></div>
 	</div>
 </div>
 </ion-content>

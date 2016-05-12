@@ -12,7 +12,7 @@
 				<span >消息</span>
 			</span>
 		</a>
-		<a class="col" href="#">
+		<a class="col" ng-click="logout()">
 			<span style="font-size:15px">
 				<span >退出登录</span>
 			</span>
@@ -21,7 +21,7 @@
 	<div id="myPerson">		
 	</div>
 	<div class="light center" id="myPersonName">
-		<span>小   红</span>
+		<span>{{user.name}}</span>
 		<div id="myRank">
 		</div>
 		<div class="center">
@@ -31,12 +31,12 @@
 	<div class="row light center" id="myNum">
 		<div class="col">
 			<span style="font-size:15px">
-				余额：<span >￥10.21</span>
+				余额：<span >￥0</span>
 			</span>
 		</div>
 		<div class="col">
 			<span style="font-size:15px">
-				订单量：<span >1234单</span>
+				订单量：<span >0单</span>
 			</label>
 		</div>
 	</div>
