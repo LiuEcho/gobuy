@@ -26,14 +26,15 @@ $http.post( ENV.domain + "/user/validateUser",{
   "mobileNumber":user.mobileNumber,
   "validateCode":user.validateCode
 }).success(function(response){
-  if (!!response) {
-      response.name = response.name?response.name:'未补全资料';
-  }else{
-       $scope.showAlert("验证码过期，请重新点击发送！");
-       return false;
-  }
-  $rootScope.user = response;
-  $scope.showAlert('登录成功！'); 
+  // if (!!response) {
+  //   console.warn(response);
+  //     response.name = response.name?response.name:'未补全资料';
+  // }else{
+  //      $scope.showAlert("验证码过期，请重新点击发送！");
+  //      return false;
+  // }
+  // $rootScope.user = response;
+  // $scope.showAlert('登录成功！'); 
   $state.go('tab.main');
 }).error(function(){
   $scope.showAlert("错误");
@@ -54,6 +55,16 @@ $scope.showAlert = function(msg) {
 })
 
 .controller('MainCtrl', function($scope) {})
+.controller('MainMarketCtrl', function($scope,Purchases,$http,ENV) {
+  var Marketes = {};
+  $scope.Purchases = Purchases.all();
+  $http.get( ENV.domain + "/user/queryMarketList",{}).success(function(response){
+    $scope.Marketes = response;
+  }).error(function(){
+    $scope.showAlert("错误");
+  })
+
+})
 .controller('OrderCtrl', function($scope, Orders) {
   $scope.showOrders = 0;
   $scope.Orders = Orders.all();
@@ -68,13 +79,10 @@ $scope.showAlert = function(msg) {
 })
 
 .controller('MyCtrl', function($scope,$location, $rootScope) {
-  var user = {};
   $scope.logout = function() {$location.path('/login');};
-  // $scope.user = $rootScope.user;
-  //console.info( $rootScope.user);
-})  
+})
 
-.controller('MyInformationCtrl', function($scope) {})  
+.controller('MyInformationCtrl', function($scope,$rootScope) {})  
 .controller('MyChargeCtrl', function($scope) {})  
 .controller('MyMessageCtrl', function($scope) {
   $scope.ShowMessage = 0;

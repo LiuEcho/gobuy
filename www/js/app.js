@@ -37,7 +37,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
     views: {
       'tab-main': {
         templateUrl: 'templates/main/main-market.html',
-        controller: 'MainmMarketCtrl'
+        controller: 'MainMarketCtrl'
       }
     }
   })
