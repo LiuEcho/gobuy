@@ -204,37 +204,52 @@ $scope.showAlert = function(msg) {
     $scope.ShowGoods  = val;
   }
 })
-.controller('PlaylistsCtrl', function($scope,$ionicSideMenuDelegate) {
+
+.controller('PlaylistsCtrl', function($scope,$ionicSideMenuDelegate,$http,ENV) {
+  $scope.goods = [];
+  $scope.selectedId = [];
+  $scope.number = 0;
   $scope.toggleRight = function() {
     $ionicSideMenuDelegate.toggleRight();
   };
-  $scope.goodslists = [
-  { type: '蔬菜', id: 0,content:[
-  {id:0,name:"小白菜",picture:'img/pic.png',selected:true},
-  {id:1,name:"土豆",picture:'img/pic2.jpg',selected:true},
-  {id:2,name:"西红柿",picture:'img/pic.png'},
-  {id:3,name:"南瓜",picture:'img/pic.png',},
-  {id:4,name:"冬瓜",picture:'img/pic2.jpg'},
-  {id:5,name:"生菜",picture:'img/pic.png'}
-  ] 
-},
-{ type: '肉类', id: 1,content:[
-{id:0,name:"猪肉",picture:'img/pic.png',selected:true},
-{id:1,name:"牛肉",picture:'img/pic.png',selected:true},
-{id:2,name:"羊肉",picture:'img/pic2.jpg'}
-]},
-{ type: '水果', id: 2,content:[
-{id:0,name:"西瓜",picture:'img/pic.png',selected:true},
-{id:1,name:"苹果",picture:'img/pic2.jpg',selected:true},
-{id:2,name:"香蕉",picture:'img/pic.png'}] },
-];
-
-$scope.goods = $scope.goodslists[0].content;
-$scope.changeType = function(goodId) {
-  $scope.goods = $scope.goodslists[goodId].content;
+  $http.get( ENV.domain + "goods/queryParentCategory",{}).success(function(response){
+    $scope.goodslists = response;
+    $scope.changeType(1);
+  })
+  $scope.changeType = function(goodId) {//更改商品分类
+   $scope.goods = [];
+   $http.get( ENV.domain + "goods/queryCategoryAndGoods",{params: {
+    "categoryId":goodId
+  }}).success(function(response){
+    for(var i in response){
+      for (var j in response[i]) {
+        response[i][j].selected = false;
+        $scope.goods.push(response[i][j]);
+      }
+    };
+  })
   $ionicSideMenuDelegate.toggleRight();
 };
-$scope.goodsSelect = function(goodId){
-  $scope.goods[goodId].selected = !$scope.goods[goodId].selected;
+
+$scope.goodsSelect = function(id){
+  var number = 0;
+  for (var i in $scope.goods) {
+    if ($scope.goods[i].id === id) {//点击选择
+      $scope.goods[i].selected = !$scope.goods[i].selected;
+    }
+
+    if ($scope.goods[i].selected) {//统计被选择的商品数
+      //$scope.selectedId.push($scope.goods[i].goodsId);
+      number++;
+    }else{
+      //$scope.selectedId.splice(1,$scope.goods[i].goodsId);
+    }
+  }
+  $scope.number = number;
+  console.log($scope.selectedId);
+};
+
+$scope.finshSelect = function(){
+  $scope.$broadcast("finshSelect", selectedId);
 }
 })

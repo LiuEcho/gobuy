@@ -1,4 +1,4 @@
-<ion-view view-title="货物选择">
+<ion-view view-title="商品选择">
 <ion-nav-buttons side="right">
 <button menu-toggle="right" class="button button-light" ng-click="toggleRight()">种类</button>
 </ion-nav-buttons>
@@ -6,10 +6,10 @@
 	<ion-side-menu-content>
 		<ion-content>
 			<ion-list>
-				<div ng-repeat="good in goods" class="col-33" style="float: left;position: relative;" ng-click=goodsSelect({{good.id}})>
-					<div id="goodsDiv" >
-						<img ng-src="{{good.picture}}">
-						<p class="center" style="margin-bottom: 3px;">{{good.name}}</p>
+				<div ng-repeat="good in goods" class="col-33" style="float: left;position: relative;" ng-click="goodsSelect({{good.id}})">
+					<div id="goodsDiv">
+						<img ng-src="{{good.imageId}}">
+						<p class="center" style="margin-bottom: 3px;">{{good.goodsName}}</p>
 					</div>
 					<div  ng-show="good.selected == true" id="selectedDiv">
 						<div>	
@@ -24,14 +24,14 @@
 	<ion-side-menu side="right" width="125">
 		<ion-content>
 			<ion-item ng-repeat="goods in goodslists" ng-click=changeType({{goods.id}})>
-				{{goods.type}}
+				{{goods.categoryName}}
 			</ion-item>
 		</ion-content>
 	</ion-side-menu>
 </ion-side-menus>
 </ion-content>
 <ion-footer-bar>
-	<span class="margin">总计：10个品种</span>
+	<span class="margin">总计：{{number}}个品种</span>
 	<button class="button button-assertive" style="position: absolute;right: 10px">确认选择</button>
 </ion-footer-bar>
 </ion-view>
