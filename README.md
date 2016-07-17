@@ -12,8 +12,13 @@ angularjs+gulp+ionic+html+css+JavaScript+Cordova
 
     ionic serve
 
-打包
+真机测试
 ----------
 
     ionic run android
     ionic run ios
+
+打包
+----------
+    ionic build android
+    ionic build ios
